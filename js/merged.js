@@ -173,7 +173,7 @@ function calculate() {
   var aCalcReturnFactor = 1+(returnExpectation*averageReturnFactor);
   for(var i=1;i<=loopCount;i++){
   	var prevValue = accum[1][i-1];
-    var temp1 = (prevValue*aCalcReturnFactor);
+    //var temp1 = (prevValue*aCalcReturnFactor);
     var expo = Math.pow(calculatedInflation,i);
     var temp2 = yearlySaving * expo;
     var newValue = temp1+temp2;
@@ -200,7 +200,7 @@ function calculateWithdraw() {
   var withdrawYear = retirementYear - currentYear; //2045-2016= 29
 	var loopCount = maxYear-currentYear;
 	 var monthlyWithdrawal = parseInt(document.getElementById("monthlyWithdrawal").value);
-  var yearlyWithdrawal = 12*monthlyWithdrawal;
+  //var yearlyWithdrawal = 12*monthlyWithdrawal;
   var calculatedInflation = 1+inflation;
   
 	for ( var row=0; row<3; row++){
@@ -268,7 +268,7 @@ function calculateWithdraw() {
 				var l = withdraw[2][i-1];
 				var temp1 = l*hCalcReturnFactor;
 				var expo = Math.pow(calculatedInflation,i);
-				var temp2 = yearlyWithdrawal*expo;
+				//var temp2 = yearlyWithdrawal*expo;
 				withdraw[2].push(Math.max(0,Math.round(temp1-temp2)));
 			}
 	}
