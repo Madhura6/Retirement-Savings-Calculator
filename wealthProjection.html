@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/wealthProjection.css">
+	<link rel="stylesheet" type="text/css" href="css/plot.css">
+	<title>Wealth Projection App</title>
+	
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<h1> Wealth Projection Calculator </h1>
+	</div>
+	<div class="row box">
+		<div class="col-sm-3">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="userInput box-container">
+						<form name="form1">
+						<label for="oneTimeContribution">One Time Contribution</label></br>
+						<input type="text" id="oneTimeContribution" name="oneTimeContribution" onblur="numeric1(document.form1.oneTimeContribution)"></br>
+						<span id="errOTC" class="error1">*This field is required</span></br>
+						<span id="errOtcNum" class="error2">Please enter number only</span></br>
+
+						<label for="monthlySaving">Monthly Savings</label></br>
+						<input type="text" id="monthlySaving" name="monthlySaving" onblur="numeric2(document.form1.monthlySaving)"></br>
+						<span id="errMS" class="error1">*This field is required</span></br>
+						<span id="errMsNum" class="error2">Please enter number only</span></br>
+
+						<label for="monthlyWithdrawal">Monthly Withdrawal</label></br>
+						<input type="text" id="monthlyWithdrawal" name="monthlyWithdrawal" onblur="numeric3(document.form1.monthlyWithdrawal)"></br>
+						<span id="errMW" class="error1">*This field is required</span></br>
+						<span id="errMwNum" class="error2">Please enter number only</span></br>
+
+						<label for="inflation">Percentage Inflation</label></br>
+						<input type="text" id="inflation" name="inflation" onblur="numeric4(document.form1.inflation)"></br>
+						<span id="errInf" class="error1">*This field is required</span></br>
+						<span id="errInfNum" class="error2">Please enter number only</span></br>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="clickMe" class="text-center"> 
+						<button class="button1" 
+						onclick="numeric1(document.form1.oneTimeContribution);
+						         numeric2(document.form1.monthlySaving);
+						         numeric3(document.form1.monthlyWithdrawal);
+						         numeric4(document.form1.inflation);
+						         calculate(); calculateWithdraw(); calculatePlot();">Project</button> 			 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-9">
+			<div id="chart"></div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/merged.js"></script>
+<script src="js/drawGraph2.js"></script>
+</body>
+</html>
+

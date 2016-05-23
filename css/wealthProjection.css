@@ -1,0 +1,111 @@
+body{
+font-family: bold "Trebuchet MS", serif;
+background-color :  #ffffff;
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+}
+
+h1{
+background: -webkit-linear-gradient(#9900ff, #6600cc, #9900ff);
+background: -moz-linear-gradient(#9900ff, #6600cc, #9900ff);
+padding: 12px 20px 12px 35px;
+text-align: left;
+margin: 0;
+font: bold 20px Trebuchet MS;
+color: white;
+}
+
+
+.box{
+background-color: #ffb833;
+margin: 20px 20px 20px 20px;
+padding: 10px 10px 10px 10px;
+}
+
+.box-container{
+font-family: bold "Trebuchet MS", serif;
+background: -webkit-linear-gradient( #d8d8d8, white, #d8d8d8);
+background: -moz-linear-gradient( #d8d8d8, white, #d8d8d8);
+padding: 10px;
+margin-bottom: 30px;
+}
+
+
+.userInput input[type=text] {
+width: 90%;
+padding: 5px 8px 5px 5px;
+margin-bottom: 15px;
+font-size: 15px;
+}
+
+.userInput label {
+color: black;
+font: bold 13px Trebuchet MS;
+padding: 8px 5px 2px 5px; 
+margin: 10px 15px 0px 15px;
+display: block;
+width: 150px;
+float: left;
+}
+
+.error1{
+color: red;
+font: normal 12px Trebuchet MS;
+visibility: hidden;
+}
+
+.error2{
+color: red;
+font: normal 12px Trebuchet MS;
+visibility: hidden;
+}
+
+
+#box #clickMe{
+height: 40px;
+width: 240px;
+margin: 5px 5px 10px 30px; 
+padding: 5px 5px 5px 5px; 
+}
+
+#clickMe .button1{
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 8px 15px 8px 15px;
+text-align: center;
+text-decoration: none;
+font: bold 16px Trebuchet MS;
+cursor: pointer;
+margin: 20px 0;
+}
+
+#chart{
+background: -webkit-linear-gradient( #d8d8d8, white, #d8d8d8);
+background: -moz-linear-gradient(#d8d8d8, white, #d8d8d8);
+/*
+height: 470px;
+width: 100%;
+padding: 5px;
+*/
+position: relative; 
+height:560px; 
+width: 100%; 
+padding: 0;
+overflow-x: scroll;
+}
+
+#chart svg {
+  position: absolute; 
+  left: 0; 
+  top:0;
+}
+
+/*
+@media all and (max-width: 600px){
+	#container{
+		width: 100%;
+	}
+}*/
